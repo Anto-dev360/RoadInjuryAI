@@ -1,0 +1,16 @@
+# Cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environnement/settings
+.venv/
+pyproject.toml
+
+# Local data
+/data/*.csv
+
+# temporary files
+*.log
+.DS_Store
+.vscode/
