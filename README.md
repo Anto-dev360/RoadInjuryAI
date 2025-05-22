@@ -10,18 +10,19 @@ The goal is to support road safety initiatives by identifying risk factors and h
 
 ## 🧪 Technologies
 
-- **Python 3.10+**
-- **Pandas, NumPy** for data manipulation
-- **Scikit-learn** for baseline models (Random Forest)
-- **XGBoost** for advanced gradient boosting classification
-- **Streamlit** for interactive dashboards and visual comparisons
+- [**Python 3.10+**](https://www.python.org/) – General-purpose programming language used throughout the project
+- [**Pandas**](https://pandas.pydata.org/) / [**NumPy**](https://numpy.org/) – For data manipulation and analysis
+- [**Scikit-learn**](https://scikit-learn.org/) – For baseline machine learning models like Random Forest
+- [**XGBoost**](https://xgboost.readthedocs.io/) – For high-performance gradient boosting classification
+- [**Streamlit**](https://streamlit.io/) – For creating interactive visual dashboards to explore model results
 
 ## 🚦 Roadmap
 
 - [x] Create project skeleton
-- [ ] Load and explore accident dataset
-- [ ] Train Random Forest & XGBoost models
-- [ ] Evaluate & compare results
+- [x] Load and explore accident dataset
+- [x] Train Random Forest & XGBoost models
+- [x] Evaluate & compare results
+- [ ] Improve best model
 - [ ] Deploy interactive dashboard via Streamlit
 
 ## 📘 License

@@ -10,3 +10,5 @@ License: MIT
 """
 
 from pathlib import Path
+
+DATA_DIR_PATH = "data/raw"
