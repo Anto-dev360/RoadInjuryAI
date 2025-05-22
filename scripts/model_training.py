@@ -18,9 +18,8 @@ License: MIT
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import normalize
-from sklearn.metrics import accuracy_score, recall_score, f1_score
-from tabulate import tabulate
-from colorama import Fore, Style, init
+
+from scripts.vizualisation import display_metrics
 
 def random_forest(X, y):
     """
@@ -79,31 +78,3 @@ def xg_boost(X, y):
     predictions_test = model_boosting.predict(X_test)
 
     display_metrics("XGBoost-style Gradient Boosting", y_train, predictions_train, y_test, predictions_test)
-
-
-init(autoreset=True)  # reset colors after each print
-
-def display_metrics(model_name, y_train, pred_train, y_test, pred_test):
-    """
-    Display formatted evaluation metrics in the terminal with colors and table layout.
-
-    Args:
-        model_name (str): Name of the model.
-        y_train, y_test (array): True labels.
-        pred_train, pred_test (array): Predicted labels.
-    """
-    train_acc = accuracy_score(y_train, pred_train)
-    test_acc = accuracy_score(y_test, pred_test)
-    recall = recall_score(y_test, pred_test, average='macro')
-    f1 = f1_score(y_test, pred_test, average='macro')
-
-    print(f"\n{Fore.CYAN}{Style.BRIGHT}📊 Model Evaluation – {model_name}\n")
-
-    table = [
-        ["Train Accuracy", f"{train_acc:.2%}"],
-        ["Test Accuracy", f"{test_acc:.2%}"],
-        ["Recall (macro)", f"{recall:.3f}"],
-        ["F1-Score", f"{f1:.3f}"]
-    ]
-
-    print(tabulate(table, headers=["Metric", "Value"], tablefmt="fancy_grid"))

@@ -22,7 +22,7 @@ The goal is to support road safety initiatives by identifying risk factors and h
 - [x] Load and explore accident dataset
 - [x] Train Random Forest & XGBoost models
 - [x] Evaluate & compare results
-- [ ] Improve best model
+- [x] Display result in streamlit dashboard
 - [ ] Deploy interactive dashboard via Streamlit
 
 ## 📘 License
